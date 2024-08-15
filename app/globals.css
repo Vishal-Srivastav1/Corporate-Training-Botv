@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  animation: fadeIn 1.5s;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,4 +31,42 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .result::-webkit-scrollbar{
+    display: none;
+  }
+
+  .itemsp::-webkit-scrollbar{
+    display: none;
+  }
+
+  .loader hr{
+    border-radius: 4px;
+    border: none;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right,#9ed7ff, #ffffff, #9ed7ff);
+    background-size: 800px 50px;
+    height: 20px;
+    animation: loader 3s infinite linear;
+
+  }
+
+  @keyframes loader {
+    0%{
+      background-position: -800px 0px;
+    }
+    100%{
+      background-position: 800px 0px;
+    }
+  }
+
+  @keyframes fadeIn {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
 }
+
