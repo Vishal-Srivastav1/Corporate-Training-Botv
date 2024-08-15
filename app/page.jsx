@@ -11,6 +11,8 @@ import { FaMicrophone,FaUserSecret } from "react-icons/fa";
 import { GiLightningMask } from "react-icons/gi";
 import { IoMdAdd } from "react-icons/io";
 import { IoIosSend } from "react-icons/io";
+import PropTypes from "prop-types";
+
 
 import { HiArrowSmRight, HiChartPie, HiInbox, HiTable, HiUser, HiViewBoards } from "react-icons/hi";
 import { use, useContext, useState } from "react";
@@ -136,7 +138,7 @@ export default function Home() {
                 return (
                   <div onClick={()=>loadPrompt(example.heading)} className="Card p-1 cursor-pointer ">
                   <Card  className="max-w-sm hover:bg-[#d6dbdc]">
-                   <p key={example.heading}>{example.heading} </p>
+                   <p >{example.heading} </p>
                    </Card>
                   </div>
                 )

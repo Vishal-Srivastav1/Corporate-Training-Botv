@@ -14,7 +14,7 @@ import {
   
   
   // const apiKey= process.env.API_KEY;
-  const apiKey = "apiKey here";
+  const apiKey = "AIzaSyB7ShrMUNH470QOfLYOH7iVITdqIgk3lgM";
   const genAI = new GoogleGenerativeAI(apiKey);
   
   const model = genAI.getGenerativeModel({
