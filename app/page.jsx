@@ -30,24 +30,30 @@ export default function Home() {
   
   const exampleMessages = [
     {
+      id:1,
       heading: 'Technical Courses', 
     },
     {
+      id:2,
       heading: 'Management Courses', 
     },
     {
+      id:3,
       heading: 'Behavioral Courses',
       
     },
     {
+      id:4,
       heading: 'Leadership Courses',
     
     },
     {
+      id:5,
       heading: 'Compliance Courses',
     
     },
     {
+      id:6,
       heading: 'Social Impact Courses',
     
     }
@@ -83,7 +89,7 @@ export default function Home() {
                   <Sidebar.Item  onClick={()=>loadPrompt(item)} >
                     <div className="flex flex-row gap-2 cursor-pointer ">
                   <MdOutlineForwardToInbox size={'25px'} />
-                  <p className=" "> {item.slice(0,18)}&nbsp;...</p>
+                  <p key={index} className=" "> {item.slice(0,18)}&nbsp;...</p>
                   </div>
                   </Sidebar.Item>
                 )
@@ -134,11 +140,11 @@ export default function Home() {
               <div className="flex flex-row md:gap-2 p-1 mb-8 md:mb-20">
               <div className="  grid grid-cols-2">
                
-                 {exampleMessages.map((example,index)=> {
+                 {exampleMessages.map((example)=> {
                 return (
                   <div onClick={()=>loadPrompt(example.heading)} className="Card p-1 cursor-pointer ">
                   <Card  className="max-w-sm hover:bg-[#d6dbdc]">
-                   <p >{example.heading} </p>
+                   <p key={example.id}> {example.heading} </p>
                    </Card>
                   </div>
                 )

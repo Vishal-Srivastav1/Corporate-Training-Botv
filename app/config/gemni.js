@@ -13,8 +13,8 @@ import {
   } from "@google/generative-ai";
   
   
-  // const apiKey= process.env.API_KEY;
-  const apiKey = "AIzaSyB7ShrMUNH470QOfLYOH7iVITdqIgk3lgM";
+  const apiKey= process.env.API_KEY;
+  // const apiKey = "API_KEY_HERE";
   const genAI = new GoogleGenerativeAI(apiKey);
   
   const model = genAI.getGenerativeModel({
